@@ -1,0 +1,11 @@
+{
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://roleta-pro-ia-v2.onrender.com"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/frontend/$1" }
+  ]
+}
+
