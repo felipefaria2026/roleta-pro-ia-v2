@@ -109,10 +109,10 @@ function App() {
         document.title = 'Registrar - Roleta Pro I.A.';
 	    /* } else if (authPage === 'login') { */
         document.title = 'Login - Roleta Pro I.A.';
-      } else {
+	      } /* else { */
         document.title = 'Bem-vindo - Roleta Pro I.A.'; // Título para a Landing Page
       }
-    } else {
+	      } /* else { */
       const currentItem = navItems.find(item => item.id === currentPage);
       const pageTitle = currentItem ? currentItem.label : 'Dashboard';
       document.title = `${pageTitle} - Roleta Pro I.A.`;
