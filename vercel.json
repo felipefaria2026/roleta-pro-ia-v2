@@ -6,6 +6,9 @@
   },
   "rewrites": [
     { "source": "/(.*)", "destination": "/frontend/$1" }
-  ]
+  ],
+  "installCommand": "npm install --prefix frontend",
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/dist"
 }
 
