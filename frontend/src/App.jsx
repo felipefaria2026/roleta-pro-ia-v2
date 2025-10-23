@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import ApiClient from './lib/api';
 // import Chat from './components/Chat'; // Temporariamente removido devido a arquivo ausente
-import RiskAnalysis from './components/RiskAnalysis';
-import BetHistory from './components/BetHistory';
-import BettingSimulator from './components/BettingSimulator';
-import RouletteGame from './components/RouletteGame';
-import DashboardStats from './components/DashboardStats';
-import UserProfile from './components/UserProfile';
-import StrategyManager from './components/StrategyManager';
-import NotificationCenter from './components/NotificationCenter';
-import RecommendationCard from './components/RecommendationCard';
-import RouletteDashboard from './components/RouletteDashboard';
-import StrategyOptimizer from './components/StrategyOptimizer';
-import AdvancedReports from './components/AdvancedReports';
-import PlatformIntegration from './components/PlatformIntegration';
-import SubscriptionPage from './pages/SubscriptionPage';
-import Login from './components/Login';
-import Register from './components/Register';
-import LandingPage from './components/LandingPage';
+// import RiskAnalysis from './components/RiskAnalysis'; // Removido por estar faltando no repositório
+// import BetHistory from './components/BetHistory'; // Removido por estar faltando no repositório
+// import BettingSimulator from './components/BettingSimulator'; // Removido por estar faltando no repositório
+// import RouletteGame from './components/RouletteGame'; // Removido por estar faltando no repositório
+// import DashboardStats from './components/DashboardStats'; // Removido por estar faltando no repositório
+// import UserProfile from './components/UserProfile'; // Removido por estar faltando no repositório
+// import StrategyManager from './components/StrategyManager'; // Removido por estar faltando no repositório
+// import NotificationCenter from './components/NotificationCenter'; // Removido por estar faltando no repositório
+// import RecommendationCard from './components/RecommendationCard'; // Removido por estar faltando no repositório
+// import RouletteDashboard from './components/RouletteDashboard'; // Removido por estar faltando no repositório
+// import StrategyOptimizer from './components/StrategyOptimizer'; // Removido por estar faltando no repositório
+// import AdvancedReports from './components/AdvancedReports'; // Removido por estar faltando no repositório
+// import PlatformIntegration from './components/PlatformIntegration'; // Removido por estar faltando no repositório
+// import SubscriptionPage from './pages/SubscriptionPage'; // Removido por estar faltando no repositório
+// import Login from './components/Login'; // Removido por estar faltando no repositório
+// import Register from './components/Register'; // Removido por estar faltando no repositório
+// import LandingPage from './components/LandingPage'; // Removido por estar faltando no repositório
 
 import { LayoutDashboard, MessageSquare, Scale, Settings, Menu, X, LogOut, Lightbulb, Zap, BarChart3, Cpu, FileText, DollarSign } from 'lucide-react';
 
@@ -31,20 +31,20 @@ function App() {
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'advanced-reports', label: 'Relatórios Avançados', icon: FileText },
-    { id: 'roulette-dashboard', label: 'Análise em Tempo Real', icon: BarChart3 },
-    { id: 'strategy-optimizer', label: 'Otimizador de Estratégias', icon: Cpu },
-    { id: 'recommendations', label: 'Recomendações', icon: Lightbulb },
-    { id: 'platform-integration', label: 'Integração', icon: Zap },
+    // { id: 'advanced-reports', label: 'Relatórios Avançados', icon: FileText },
+    // { id: 'roulette-dashboard', label: 'Análise em Tempo Real', icon: BarChart3 },
+    // { id: 'strategy-optimizer', label: 'Otimizador de Estratégias', icon: Cpu },
+    // { id: 'recommendations', label: 'Recomendações', icon: Lightbulb },
+    // { id: 'platform-integration', label: 'Integração', icon: Zap },
 // { id: 'chat', label: 'Chatbot', icon: MessageSquare }, // Temporariamente removido devido a arquivo ausente
-    { id: 'risk-analysis', label: 'Análise de Risco', icon: Scale },
-    { id: 'bet-history', label: 'Histórico', icon: LayoutDashboard },
-    { id: 'betting-simulator', label: 'Simulador', icon: Scale },
-    { id: 'roulette-game', label: 'Roleta', icon: LayoutDashboard },
-    { id: 'dashboard-stats', label: 'Estatísticas', icon: LayoutDashboard },
-    { id: 'user-profile', label: 'Perfil', icon: LayoutDashboard },
-    { id: 'strategy-manager', label: 'Estratégias', icon: Settings },
-    { id: 'subscriptions', label: 'Assinaturas', icon: DollarSign },
+    // { id: 'risk-analysis', label: 'Análise de Risco', icon: Scale },
+    // { id: 'bet-history', label: 'Histórico', icon: LayoutDashboard },
+    // { id: 'betting-simulator', label: 'Simulador', icon: Scale },
+    // { id: 'roulette-game', label: 'Roleta', icon: LayoutDashboard },
+    // { id: 'dashboard-stats', label: 'Estatísticas', icon: LayoutDashboard },
+    // { id: 'user-profile', label: 'Perfil', icon: LayoutDashboard },
+    // { id: 'strategy-manager', label: 'Estratégias', icon: Settings },
+    // { id: 'subscriptions', label: 'Assinaturas', icon: DollarSign },
   ];
 
   const handleNavigate = (page) => {
@@ -63,7 +63,7 @@ function App() {
       ariaLive.textContent = announcement;
       document.body.appendChild(ariaLive);
       setTimeout(() => ariaLive.remove(), 1000);
-    }
+	    /* } */
   };
 
   // Gerenciar navegação por teclado
@@ -71,7 +71,7 @@ function App() {
     // Fechar menu móvel ao pressionar Escape
     if (e.key === 'Escape' && mobileMenuOpen) {
       setMobileMenuOpen(false);
-    }
+	  /* } */
   };
 
   useEffect(() => {
@@ -104,10 +104,10 @@ function App() {
 
   // Atualizar título da página dinamicamente
   useEffect(() => {
-    if (!isAuthenticated) {
+	  /* if (!isAuthenticated) { */
       if (authPage === 'register') {
         document.title = 'Registrar - Roleta Pro I.A.';
-      } else if (authPage === 'login') {
+	    /* } else if (authPage === 'login') { */
         document.title = 'Login - Roleta Pro I.A.';
       } else {
         document.title = 'Bem-vindo - Roleta Pro I.A.'; // Título para a Landing Page
@@ -146,29 +146,29 @@ function App() {
     }
   };
 
-  // Se não estiver autenticado, exibir páginas de login/registro
+  // Se não estiver autenticado, exibir páginas de login/registro (Componentes removidos para build)
   if (!isAuthenticated) {
-    if (authPage === 'landing') {
-      return (
-        <LandingPage
+	    /* if (authPage === 'landing') { */
+	      /* return ( */
+	        /* <LandingPage
+	          /* onNavigateToLogin={() => setAuthPage('login')} */ */
+	          /* onNavigateToRegister={() => setAuthPage('register')} */
+	        /* /> */
+	      /* ); */
+	    /* } else if (authPage === 'register') { */
+	      /* return ( */
+	        /* <Register
+	          onRegisterSuccess={handleLoginSuccess} */
           onNavigateToLogin={() => setAuthPage('login')}
-          onNavigateToRegister={() => setAuthPage('register')}
-        />
-      );
-    } else if (authPage === 'register') {
-      return (
-        <Register
-          onRegisterSuccess={handleLoginSuccess}
-          onNavigateToLogin={() => setAuthPage('login')}
-        />
-      );
+	        /* /> */
+	      /* ); */
     } else if (authPage === 'login') {
-      return (
-        <Login
-          onLoginSuccess={handleLoginSuccess}
-          onNavigateToRegister={() => setAuthPage('register')}
-        />
-      );
+	      /* return ( */
+	        /* <Login
+	          onLoginSuccess={handleLoginSuccess} */
+	          /* onNavigateToRegister={() => setAuthPage('register')} */
+	        /* /> */
+	      /* ); */
     }
   }
 
@@ -177,7 +177,7 @@ function App() {
       <header className="p-4 border-b border-purple-900/30 flex justify-between items-center sticky top-0 z-50 bg-slate-950/95 backdrop-blur flex-wrap">
         <h1 className="text-2xl font-bold text-purple-400 flex-shrink-0">Roleta Pro I.A.</h1>
         <div className="flex items-center space-x-2 order-3 md:order-2 w-full md:w-auto md:ml-auto">
-          {currentUser && <NotificationCenter currentUser={currentUser} />}
+          {/* {currentUser && <NotificationCenter currentUser={currentUser} />} */}
           {currentUser && (
             <button
               onClick={handleLogout}
@@ -225,20 +225,20 @@ function App() {
             <p className="text-base md:text-lg text-gray-400 mb-8">Selecione uma opção acima para começar.</p>
           </div>
         )}
-        {currentPage === 'advanced-reports' && <AdvancedReports currentUser={currentUser} />}
-        {currentPage === 'recommendations' && <RecommendationCard currentUser={currentUser} />}
-        {currentPage === 'roulette-dashboard' && <RouletteDashboard currentUser={currentUser} />}
-        {currentPage === 'strategy-optimizer' && <StrategyOptimizer currentUser={currentUser} />}
-        {currentPage === 'platform-integration' && <PlatformIntegration currentUser={currentUser} />}
+        {/* {currentPage === 'advanced-reports' && <AdvancedReports currentUser={currentUser} />} */}
+        {/* {currentPage === 'recommendations' && <RecommendationCard currentUser={currentUser} />} */}
+        {/* {currentPage === 'roulette-dashboard' && <RouletteDashboard currentUser={currentUser} />} */}
+        {/* {currentPage === 'strategy-optimizer' && <StrategyOptimizer currentUser={currentUser} />} */}
+        {/* {currentPage === 'platform-integration' && <PlatformIntegration currentUser={currentUser} />} */}
 	        {/* {currentPage === 'chat' && <Chat onNavigate={handleNavigate} currentUser={currentUser} />} */}
-        {currentPage === 'risk-analysis' && <RiskAnalysis currentUser={currentUser} />}
-        {currentPage === 'bet-history' && <BetHistory currentUser={currentUser} />}
-        {currentPage === 'betting-simulator' && <BettingSimulator currentUser={currentUser} />}
-        {currentPage === 'roulette-game' && <RouletteGame currentUser={currentUser} />}
-        {currentPage === 'dashboard-stats' && <DashboardStats currentUser={currentUser} />}
-        {currentPage === 'user-profile' && <UserProfile currentUser={currentUser} onUserUpdate={setCurrentUser} />}
-        {currentPage === 'strategy-manager' && <StrategyManager currentUser={currentUser} />}
-        {currentPage === 'subscriptions' && <SubscriptionPage currentUser={currentUser} />}
+        {/* {currentPage === 'risk-analysis' && <RiskAnalysis currentUser={currentUser} />} */}
+        {/* {currentPage === 'bet-history' && <BetHistory currentUser={currentUser} />} */}
+        {/* {currentPage === 'betting-simulator' && <BettingSimulator currentUser={currentUser} />} */}
+        {/* {currentPage === 'roulette-game' && <RouletteGame currentUser={currentUser} />} */}
+        {/* {currentPage === 'dashboard-stats' && <DashboardStats currentUser={currentUser} />} */}
+        {/* {currentPage === 'user-profile' && <UserProfile currentUser={currentUser} onUserUpdate={setCurrentUser} />} */}
+        {/* {currentPage === 'strategy-manager' && <StrategyManager currentUser={currentUser} />} */}
+        {/* {currentPage === 'subscriptions' && <SubscriptionPage currentUser={currentUser} />} */}
       </main>
     </div>
   );
