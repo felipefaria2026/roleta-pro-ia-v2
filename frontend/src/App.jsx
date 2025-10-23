@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiClient from './lib/api';
-import Chat from './components/Chat';
+// import Chat from './components/Chat'; // Temporariamente removido devido a arquivo ausente
 import RiskAnalysis from './components/RiskAnalysis';
 import BetHistory from './components/BetHistory';
 import BettingSimulator from './components/BettingSimulator';
@@ -36,7 +36,7 @@ function App() {
     { id: 'strategy-optimizer', label: 'Otimizador de Estratégias', icon: Cpu },
     { id: 'recommendations', label: 'Recomendações', icon: Lightbulb },
     { id: 'platform-integration', label: 'Integração', icon: Zap },
-    { id: 'chat', label: 'Chatbot', icon: MessageSquare },
+// { id: 'chat', label: 'Chatbot', icon: MessageSquare }, // Temporariamente removido devido a arquivo ausente
     { id: 'risk-analysis', label: 'Análise de Risco', icon: Scale },
     { id: 'bet-history', label: 'Histórico', icon: LayoutDashboard },
     { id: 'betting-simulator', label: 'Simulador', icon: Scale },
@@ -230,7 +230,7 @@ function App() {
         {currentPage === 'roulette-dashboard' && <RouletteDashboard currentUser={currentUser} />}
         {currentPage === 'strategy-optimizer' && <StrategyOptimizer currentUser={currentUser} />}
         {currentPage === 'platform-integration' && <PlatformIntegration currentUser={currentUser} />}
-        {currentPage === 'chat' && <Chat onNavigate={handleNavigate} currentUser={currentUser} />}
+	        {/* {currentPage === 'chat' && <Chat onNavigate={handleNavigate} currentUser={currentUser} />} */}
         {currentPage === 'risk-analysis' && <RiskAnalysis currentUser={currentUser} />}
         {currentPage === 'bet-history' && <BetHistory currentUser={currentUser} />}
         {currentPage === 'betting-simulator' && <BettingSimulator currentUser={currentUser} />}
